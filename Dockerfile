@@ -2,13 +2,15 @@ FROM node:20
 
 WORKDIR /app
 
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
 COPY . .
 
-RUN yarn install
+RUN yarn build
 
 EXPOSE 3000
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
-# Use yarn to start the application
-CMD ["yarn", "start"]
+CMD ["node", "dist/index.js"]
