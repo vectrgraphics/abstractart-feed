@@ -14,7 +14,7 @@ const run = async () => {
       maybeStr(process.env.FEEDGEN_SUBSCRIPTION_ENDPOINT) ??
       'wss://bsky.network',
     publisherDid:
-      maybeStr(process.env.FEEDGEN_PUBLISHER_DID) ?? 'did:example:alice',
+      maybeStr(process.env.FEEDGEN_PUBLISHER_DID) ?? 'did:plc:epxz2f65p24d4k3thlak2zcy',
     subscriptionReconnectDelay:
       maybeInt(process.env.FEEDGEN_SUBSCRIPTION_RECONNECT_DELAY) ?? 3000,
     hostname,
