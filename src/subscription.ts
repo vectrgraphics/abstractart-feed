@@ -10,6 +10,10 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
 
     const ops = await getOpsByType(evt)
 
+    for (const post of ops.posts.creates) {
+      console.log('POST:', post.record.text)
+    }
+
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
 
     const postsToCreate = ops.posts.creates
