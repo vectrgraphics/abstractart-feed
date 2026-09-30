@@ -3406,7 +3406,7 @@ export const schemaDict = {
           blocks: {
             type: 'bytes',
             description: 'CAR file containing relevant blocks',
-            maxLength: 1000000,
+            maxLength: 2000000,
           },
           ops: {
             type: 'array',
